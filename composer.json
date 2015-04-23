@@ -1,0 +1,19 @@
+{
+  "name": "maxserv/accountmanagement",
+  "type": "typo3-cms-extension",
+  "description": "Manage TYPO3 CMS users from the cli using an extbase command controller",
+  "homepage": "https://github.com/MaxServ/t3ext-usermanagement",
+  "license": ["GPL-2.0+"],
+  "keywords": [
+    "TYPO3 CMS",
+    "user management",
+    "cli"
+  ],
+  "support": {
+    "issues": "https://github.com/MaxServ/t3ext-usermanagement/issues"
+  },
+  "version": "1.0.0",
+  "require": {
+    "typo3/cms-core": ">=6.2.6,<8.0"
+  }
+}
