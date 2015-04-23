@@ -84,8 +84,7 @@ class UserCommandController extends CommandController {
 	/**
 	 * Deactivate a user
 	 *
-	 * This command deactivates a user by flagging all of its accounts as
-	 * expired.
+	 * This command deactivates a user by flagging all of its accounts as expired.
 	 *
 	 * If an authentication provider is specified, this command will look for
 	 * an account with the given username related to the given provider. Still,
@@ -122,31 +121,12 @@ class UserCommandController extends CommandController {
 	/**
 	 * Create a new user
 	 *
-	 * This command creates a new user which has access to the backend user
-	 * interface.
+	 * This command creates a new user which has access to the backend user interface.
 	 *
-	 * More specifically, this command will create a new user and a new account
-	 * at the same time. The created account is, by default, a Neos backend
-	 * account using the the "Typo3BackendProvider" for authentication. The
-	 * given username will be used as an account identifier for that new
-	 * account.
-	 *
-	 * If an authentication provider name is specified, the new account will be
-	 * created for that provider instead.
-	 *
-	 * Roles for the new user can optionally be specified as a comma separated
-	 * list. For all roles provided by Neos, the role namespace "TYPO3.Neos:"
-	 * can be omitted.
-	 *
-	 * @param string $username The username of the user to be created, used as
-	 *    an account identifier for the newly created account
+	 * @param string $username The username of the user to be created, used as an account identifier for the newly created account
 	 * @param string $password Password of the user to be created
 	 * @param string $firstName First name of the user to be created
 	 * @param string $lastName Last name of the user to be created
-	 * @param string $roles A comma separated list of roles to assign.
-	 *    Examples: "Editor, Acme.Foo:Reviewer"
-	 * @param string $authenticationProvider Name of the authentication
-	 *    provider to use for the new account. Example: "Typo3BackendProvider"
 	 *
 	 * @return void
 	 */
