@@ -1,4 +1,4 @@
-# TYPO3 extesnion: accountmanagement
+# TYPO3 extension: accountmanagement
 Manage TYPO3 CMS users from the cli using an extbase command controller
 
 Use with [https://github.com/helhum/typo3_console](https://github.com/helhum/typo3_console) for optimum pleasure.
