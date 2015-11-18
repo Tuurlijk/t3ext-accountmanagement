@@ -158,15 +158,11 @@ class UserCommandController extends CommandController {
 	 *
 	 * @param string $username Username of the user to find
 	 *
-	 * @return BackendUser The user
+	 * @return BackendUser|FALSE The user
 	 */
 	protected function getUser($username) {
-		$user = FALSE;
-		$users = $this->backendUserRepository->findByUserName($username);
-		foreach ($users as $currentUser) {
-			$user = $currentUser;
-			break;
-		}
+		$user = $this->backendUserRepository->findOneByUserName($username);
+
 		if (!$user instanceof BackendUser) {
 			$user = FALSE;
 		}
@@ -183,12 +179,8 @@ class UserCommandController extends CommandController {
 	 * @throws Exception
 	 */
 	protected function getUserOrFail($username) {
-		$user = NULL;
-		$users = $this->backendUserRepository->findByUserName($username);
-		foreach ($users as $currentUser) {
-			$user = $currentUser;
-			break;
-		}
+		$user = $this->backendUserRepository->findOneByUserName($username);
+
 		if (!$user instanceof BackendUser) {
 			$this->outputLine('The user "%s" does not exist.', array($username));
 			$this->quit(1);
