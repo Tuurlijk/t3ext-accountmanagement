@@ -10,17 +10,8 @@ git clone https://github.com/MaxServ/t3ext-accountmanagement.git accountmanageme
 
 Or install it using composer:
 ```json
-{
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/MaxServ/t3ext-accountmanagement.git"
-        }
-    ],
-    "require": {
-        "maxserv/accountmanagement": "*"
-    }
-}
+composer config repositories.yamlconfig vcs https://github.com/MaxServ/t3ext-accountmanagement.git
+composer require maxserv/accountmanagement
 ```
 
 Example:
