@@ -23,7 +23,7 @@ $EM_CONF['accountmanagement'] = array(
 	'CGLcompliance_note' => '',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '6.2.6-7.99.99'
+			'typo3' => '6.2.6-8.99.99'
 		),
 		'conflicts' => array(),
 		'suggests' => array(),
